@@ -1,28 +1,15 @@
 {
   "version": 2,
-  "builds": [
-    {
-      "src": "package.json",
-      "use": "@vercel/static-build",
-      "config": {
-        "distDir": "build"
-      }
-    }
-  ],
-  "routes": [
-    {
-      "handle": "filesystem"
-    },
-    {
-      "src": "/.*",
-      "dest": "/index.html"
-      {
+  "framework": "create-react-app",
   "buildCommand": "npm run build",
   "outputDirectory": "build",
   "installCommand": "npm install",
-  "framework": "create-react-app"
+  "env": {
+    "REACT_APP_API_URL": "https://ai-job-recommend-backend.onrender.com"
+  },
+  "github": {
+    "enabled": true,
+    "silent": false
+  }
 }
 
-    }
-  ]
-}
